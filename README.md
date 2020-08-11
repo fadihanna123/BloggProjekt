@@ -1,34 +1,26 @@
 ## 1. Blogging 
 ## 1.1 Bloggprojekt
-Detta är ett bloggprojekt som hjälper personal att kommunicera med sina chefer genom att till exempel anmäla sjukanmälan eller ansöka om ledighet. <br>
-**Webbplatsen har 8 funktioner:** <br>
-1 - Se de senaste nyheter. <br>
-2 - Administrera nyheter, att kunna lägga till/ändra/radera nyheter(för administratörer). <br>
-3 - Ladda upp filer(för administratörer) och kunna se dessa filer i en tabell. <br>
-4 - Se personalmedlemmar. <br>
-5 - Anmäla sjukanmälan och söka om ledighet. <br>
-6 - FAQ(frågor och svar) sidan och kunna lägga till frågor(för administratörer).<br>
-7 - Ändra medlemsuppgifter, ändra e-post och lösenordet. <br>
-8 - Adminpanel där kan man administrera företagets uppgifter, lägga till kategorier och möjlighet att kunna godkänna medlemmar. <br>
+Detta är ett bloggprojekt som underlättar att administrera blogginlägg. <br>
+**Webbplatsen har 10 funktioner:** <br>
+1 - Se de senaste 5 inlägg. <br>
+2 - Se de registrerade användare. <br>
+3 - Kunna söka efter inlägg. <br>
+4 - Kunna skapa och administrera blogginlägg.<br>
 **I utloggadläge kan man:**<br>
 1 - Se startsidan <br>
 2 - Registrera sig i intränatapplikationen. <br>
 3 - Logga in i intränatapplikationen. <br>
-4 - Återställa lösenordet. <br>
+4 - Se de senaste 5 inlägg. <br>
+5 - Se de registrerade användare. <br>
+6 - Kunna söka efter inlägg. <br>
 Webbapplikationen är responsivt.<br>
 **Den här webbapplikationen består av dessa länkar:**  <br>
 1 - Startsida<br>
 2 - Logga in <br>
-3 - Återställa lösenordet. <br>
-4 - Registrera sig. <br>
-5 - Hem. <br>
-6 - Nyheter. <br>
-7 - Filarkiv. <br>
-8 - Personal. <br>
-9 - Anmälan. <br>
-10 - FAQ.<br>
-11 - Mitt konto. <br>
-12 - Adminpanel. <br>
+3 - Registrera sig. <br>
+4 - Skapa inlägg. <br>
+5 - Administrera inlägg. <br>
+6 - Logga ut. <br>
 ## 1.2 Mappstruktur <br>
 css/<br>
 css/main.css<br>
@@ -85,5 +77,5 @@ Du behöver skapa dessa kolumner i dessa tabeller :<br>
 ## 1.4 Programmeringsspråk som används i projektet: <br>
 HTML, CSS, Objektorienterad PHP och Javascript. <br>
 ## 1.5 Skärmdump av webbplatsen <br>
-![alt text](https://github.com/fadihanna123/Intranat/blob/master/screenshot.png "Screenshot av hemsidan")
+![alt text](https://github.com/fadihanna123/BloggProjekt/blob/master/Screenshot.PNG "Screenshot av hemsidan")
 

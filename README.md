@@ -69,7 +69,7 @@ Du behöver skapa dessa kolumner i dessa tabeller :<br>
 `usrid` int(11) NOT NULL<br>
 **users**:<br>
 `id` int(11) NOT NULL,<br>
-`fullnamn` text NOT NULL,<br><br>
+`fullnamn` text NOT NULL,<br>
 `username` text NOT NULL,<br>
 `password` text NOT NULL,<br>
 `email` text NOT NULL,<br>

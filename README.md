@@ -12,7 +12,7 @@ Detta är ett bloggprojekt som underlättar att administrera blogginlägg. <br>
 3 - Logga in i intränatapplikationen. <br>
 4 - Se de senaste 5 inlägg. <br>
 5 - Se de registrerade användare. <br>
-6 - Kunna söka efter inlägg. <br>
+6 - Söka efter inlägg. <br>
 Webbapplikationen är responsivt.<br>
 **Den här webbapplikationen består av dessa länkar:**  <br>
 1 - Startsida<br>

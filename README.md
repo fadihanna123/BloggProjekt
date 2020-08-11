@@ -55,7 +55,7 @@ Du kan ladda ner alla dessa filer och installera källkodsfiler i din lokala ser
 Du behöver ändra SQL uppgifter från din localhost till din egen i dessa filer:<br>
 includes/config.php rad 12, 13, 14 och 15.<br>
 Du kan använda blogg.sql filen för att kunna skapa tabeller.<br>
-Manuellt:
+Manuellt:<br>
 Du behöver skapa dessa tabeller:<br>
 posts för att administrera blogginlägg.<br>
 users för att administrera de registrerade användare.<br>

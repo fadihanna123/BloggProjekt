@@ -11,5 +11,6 @@
 	        <textarea rows='8' class='content' name='content' cols='106' required></textarea><br>
 	        <input type='submit' class='add' value='Lägg till'>
 	        <input type='hidden' name='author' value='$show'>
-	    </form>";
+		</form>";
+		
 ?>

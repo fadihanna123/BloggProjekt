@@ -24,4 +24,5 @@
     } else {
         print "Fyll in alla rutorna.";
     }
+    
 ?>

@@ -1,64 +1,66 @@
 /* Mobilt cssmodell */
-@media only screen and (max-width: 1400px) 
-{
-    #container 
-    {
-        width: 100%; /* Gör container ha bredd 100% */
-        margin: 0; /* Ta bort 0 pixlar av alla sidor */
-    }
+@media only screen and (max-width: 1400px) {
+  #container {
+    width: 100%; /* Gör container ha bredd 100% */
+    margin: 0; /* Ta bort 0 pixlar av alla sidor */
+  }
 
-    .maintable-left 
-    {
-        width: 25%; /* Gör den ha bredd 25% */
-    }
+  .maintable-left {
+    width: 25%; /* Gör den ha bredd 25% */
+  }
 
-    .maintable-right 
-    {
-        width: 25%; /* Gör den ha bredd 25% */
-    }
+  .maintable-right {
+    width: 25%; /* Gör den ha bredd 25% */
+  }
 
-    .maintable-center 
-    {
-        width: 50%; /* Gör den ha bredd 50% */
-    }
-    .logobox
-    {
-        background-repeat: no-repeat; /* Gör Logodelen att inte upprepas */
-        background-size: contain; /* Ändra storlek på bakgrundsbilden och se till att bilden är helt synlig oavsett situationer */
-        background-position: center; /* Centrera bakgrundsbilden */
-        margin: 0 10px 0 10px; /* Flytta logodelen 0pixlar top, 10 pixlar botten, 0 pixlar vänster och 10 pixlar höger */
-    }
-    #usrtxt
-    {
-        width: 70px; /* Gör användarnamnet textfält ha bredd 70 pixlar */
-    }
-    .loginbox2
-    {
-        font-size: 13px; /* Låt logga in delen ha textstorlek 13 pixlar */
-    }
-    #word
-    {
-        width: 70px; /* Gör den ha bredd 70 pixlar */
-    }
-    #usrpass
-    {
-        width: 70px; /* Gör den ha bredd 70 pixlar */
-    }
-    .registerbox
-    {
-        position: relative; 
-        left: -2%; /* Flytta registrera delen till höger  */
-    }
-    .fullnametxt, .emailtxt, .passwordtxt, .usrnametxt
-    {
-        width: 70px; /* Gör dem ha bredd 70 pixlar */
-    }
-    .register
-    {
-        margin-left: -70px; /* Flytta registrera delen till höger */
-    }
-    .title, .content, .author, .changetitle, .changecontent
-    {
-        width: 200px; /* Gör dem ha bredd 200 pixlar */
-    }
+  .maintable-center {
+    width: 50%; /* Gör den ha bredd 50% */
+  }
+
+  .logobox {
+    background-repeat: no-repeat; /* Gör Logodelen att inte upprepas */
+    background-size: contain; /* Ändra storlek på bakgrundsbilden och se till att bilden är helt synlig oavsett situationer */
+    background-position: center; /* Centrera bakgrundsbilden */
+    margin: 0 10px 0 10px; /* Flytta logodelen 0pixlar top, 10 pixlar botten, 0 pixlar vänster och 10 pixlar höger */
+  }
+
+  #usrtxt {
+    width: 70px; /* Gör användarnamnet textfält ha bredd 70 pixlar */
+  }
+
+  .loginbox2 {
+    font-size: 13px; /* Låt logga in delen ha textstorlek 13 pixlar */
+  }
+
+  #word {
+    width: 70px; /* Gör den ha bredd 70 pixlar */
+  }
+
+  #usrpass {
+    width: 70px; /* Gör den ha bredd 70 pixlar */
+  }
+
+  .registerbox {
+    position: relative;
+    left: -2%; /* Flytta registrera delen till höger  */
+  }
+
+  .fullnametxt,
+  .emailtxt,
+  .passwordtxt,
+  .usrnametxt {
+    width: 70px; /* Gör dem ha bredd 70 pixlar */
+  }
+
+  .register {
+    margin-left: -70px; /* Flytta registrera delen till höger */
+  }
+
+  .title,
+  .content,
+  .author,
+  .changetitle,
+  .changecontent {
+    width: 200px; /* Gör dem ha bredd 200 pixlar */
+  }
 }

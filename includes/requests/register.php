@@ -13,4 +13,5 @@
 	} else {
 	    echo "Du måste fylla in de obligatoriska rutorna.";
 	}
+	
 ?>

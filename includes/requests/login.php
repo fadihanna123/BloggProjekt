@@ -4,12 +4,12 @@
 
     if (isset($_POST['usrtxt']) && isset($_POST['passtxt'])) {
         if (empty($_POST['usrtxt']) || strlen($_POST['usrtxt']) < 1) {
-            print "Användarnamn ska vara minst 1 tecken.";
+            print "Anvï¿½ndarnamn ska vara minst 1 tecken.";
         } else if (empty($_POST['passtxt']) || strlen($_POST['passtxt']) < 1) {
-            print "Lösenordet ska vara minst 1 tecken.";
+            print "Lï¿½senordet ska vara minst 1 tecken.";
         } else {
             if (isset($_SESSION['email'])) {
-                echo "Du är redan inloggad";
+                echo "Du ï¿½r redan inloggad";
             } else {
                 $txt = $_POST['usrtxt'];
                 $pass = $_POST['passtxt'];
@@ -20,4 +20,5 @@
     } else {
         print "Fyll in alla rutorna.";
     }
+    
 ?>

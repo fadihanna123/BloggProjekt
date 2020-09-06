@@ -1,4 +1,5 @@
 <?php
+
 	session_start();
 
 	error_reporting(-1);
@@ -13,4 +14,5 @@
 	define("DBDATABASE", "DB");
 	define("DBUSER", "USERNAME");
 	define("DBPASS", "PASSWORD");
+	
 ?>

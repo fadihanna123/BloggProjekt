@@ -1,22 +1,20 @@
 ﻿<?php
-    require "includes/config.php";
 
+    require "includes/config.php";
     $posts = new Posts();
+
 ?>
 <!-- Utvecklare: Fadi Hanna -->
 <!DOCTYPE html>
 <html lang="sv">
     <head>
         <title>Blogging</title>
-        <meta charset="utf-8">
-        <script src="js/jquery-3.3.1.js"></script>
-        <script src="js/loadAll.js?t=<?= time() ?>"></script>
-
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="css/main.css?t=<?= time() ?>">
-        <link rel="stylesheet" type="text/css" href="css/mobile.css">
-        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="css/main.css?t=<?= time() ?>" />
+        <link rel="stylesheet" type="text/css" href="css/mobile.css" />
+        <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     </head>
     <body>
         <!-- Lägg till Container inställningar -->
@@ -32,6 +30,7 @@
                     <div class="menu-left">
                         <span onclick="window.location = 'index.php'">Startsida</span>
                         <?php
+
                         if (isset($_SESSION['email'])) {
                             echo "<span class='ajax' data-ajax='create'>Skapa inlägg</span>";
                             echo "<span class='ajax' data-ajax='admin'>Administrera inlägg</span>";
@@ -39,6 +38,7 @@
                         } else {
                             echo "<span class='ajax' data-ajax='register'>Registrering</span>";
                         }
+
                         ?>
                     </div>
                 </div>
@@ -55,6 +55,7 @@
                         // Visa de registrerade användare
                         echo '<div>De registrerade användare</div>';
                         $posts->showUsers();
+
                         ?>
                     </div>
                 </div>
@@ -64,25 +65,27 @@
                     <div class='searchbox2'>
                         <form action="search" method="post">
                             Sök här efter inlägg<br>
-                            <input type="text" name="word" id="word" placeholder="Sök här" required>
-                            <input type="submit" name="searchbtn" value="Sök" class='search'>
+                            <input type="text" name="word" id="word" placeholder="Sök här" required />
+                            <input type="submit" name="searchbtn" value="Sök" class='search' />
                         </form>	
                     </div>
                     <?php
+
                     if (!isset($_SESSION['email'])) 
                     {
                         // Visa logga in delen
                             echo '<div class="loginbox2">
-    				Logga in<br>
-    				<form action="login" method="post">
-    					Användarnamn:<br>
-    					<input type="text" id="usrtxt" name="usrtxt" placeholder="Usernamne" required><br>
-    					Lösenord:<br>
-    					<input type="password" name="passtxt" id="usrpass" placeholder="Password" required><br><br>
-    					<input type="submit" name="loginbtn" class="login" value="Logga in">
-    				</form>	
-    				</div>';
+                            Logga in<br>
+                            <form action="login"        method="post">
+                            Användarnamn:<br>
+                            <input type="text" id="usrtxt" name="usrtxt" placeholder="Usernamne" required><br>
+                            Lösenord:<br>
+                            <input type="password" name="passtxt" id="usrpass" placeholder="Password" required><br><br>
+                            <input type="submit" name="loginbtn" class="login" value="Logga in">
+                        </form>	
+                        </div>';
                     }
+                    
                     ?>
                 </div>
 
@@ -91,5 +94,7 @@
             <div class="footer">Skapad av X</div>
            
         </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="js/loadAll.js?t=<?= time() ?>"></script>
     </body>
 </html>

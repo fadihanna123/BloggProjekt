@@ -1,11 +1,11 @@
 <?php
 
-	require '../config.php';
+require '../config.php';
 
-	$ord = $_POST['word'];
+$ord = $_POST['word'];
 
-	echo "<h3>Sökresultat för <b>" . $ord . "</b></h3>";
-	$searchsql = new Posts();
-	$searchsql->search($ord);
-	
+echo "<h3>Sökresultat för <b>" . $ord . "</b></h3>";
+$searchsql = new Posts();
+$searchsql->search($ord);
+
 ?>

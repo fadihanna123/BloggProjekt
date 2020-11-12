@@ -1,5 +1,7 @@
-## 1. Blogging 
+## 1. Blogging
+
 ## 1.1 Bloggprojekt
+
 Detta är ett bloggprojekt som underlättar att administrera blogginlägg. <br>
 **Webbplatsen har 10 funktioner:** <br>
 1 - Se de senaste 5 inlägg. <br>
@@ -14,14 +16,16 @@ Detta är ett bloggprojekt som underlättar att administrera blogginlägg. <br>
 5 - Se de registrerade användare. <br>
 6 - Söka efter inlägg. <br>
 Webbapplikationen är responsivt.<br>
-**Den här webbapplikationen består av dessa länkar:**  <br>
+**Den här webbapplikationen består av dessa länkar:** <br>
 1 - Startsida<br>
 2 - Logga in <br>
 3 - Registrera sig. <br>
 4 - Skapa inlägg. <br>
 5 - Administrera inlägg. <br>
 6 - Logga ut. <br>
+
 ## 1.2 Mappstruktur <br>
+
 css/<br>
 css/main.css<br>
 css/mobile.css<br>
@@ -49,7 +53,9 @@ Includes/config.php<br>
 Includes/loader.php<br>
 blogg.sql
 index.php
+
 ## 1.3 Installation <br>
+
 Du kan ladda ner alla dessa filer och installera källkodsfiler i din lokala server eller egen hemsida. <br>
 Du behöver ändra SQL uppgifter från din localhost till din egen i dessa filer:<br>
 includes/config.php rad 12, 13, 14 och 15.<br>
@@ -73,8 +79,11 @@ Du behöver skapa dessa kolumner i dessa tabeller :<br>
 `password` text NOT NULL,<br>
 `email` text NOT NULL,<br>
 `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP<br>
-## 1.4 Programmeringsspråk som används i projektet: <br>
-HTML, CSS, Objektorienterad PHP och Javascript. <br>
-## 1.5 Skärmdump av webbplatsen <br>
-![alt text](https://github.com/fadihanna123/BloggProjekt/blob/master/Screenshot.PNG "Screenshot av hemsidan")
 
+## 1.4 Programmeringsspråk som används i projektet: <br>
+
+HTML, CSS, Objektorienterad PHP och Javascript. <br>
+
+## 1.5 Skärmdump av webbplatsen <br>
+
+![alt text](https://github.com/fadihanna123/BloggProjekt/blob/master/Screenshot.PNG "Screenshot av hemsidan")

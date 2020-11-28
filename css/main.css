@@ -42,6 +42,8 @@ hr {
   border: 1px solid black; /* Täcka en ram över huvudinnehållet */
   border-radius: 15px; /* Gör ramen rund till 15 pixlar */
   overflow: hidden; /* Gör Överflödet klippt */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex; /* Visar ramet som en flexibel behållare */
 }
 

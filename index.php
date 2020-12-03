@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 require "includes/config.php";
 $posts = new Posts();
@@ -29,12 +29,12 @@ $posts = new Posts();
                     <div class="menu-left">
                         <span onclick="window.location = 'index.php'">Startsida</span>
                         <?php if (isset($_SESSION['email'])) {
-                            echo "<span class='ajax' data-ajax='create'>Skapa inlägg</span>";
-                            echo "<span class='ajax' data-ajax='admin'>Administrera inlägg</span>";
-                            echo "<span class='ajax' data-ajax='logout'>Logga ut</span>";
-                        } else {
-                            echo "<span class='ajax' data-ajax='register'>Registrering</span>";
-                        } ?>
+    echo "<span class='ajax' data-ajax='create'>Skapa inlägg</span>";
+    echo "<span class='ajax' data-ajax='admin'>Administrera inlägg</span>";
+    echo "<span class='ajax' data-ajax='logout'>Logga ut</span>";
+} else {
+    echo "<span class='ajax' data-ajax='register'>Registrering</span>";
+} ?>
                     </div>
                 </div>
                  <!-- Lägg till centerdelen -->
@@ -65,8 +65,8 @@ $posts = new Posts();
                         </form>	
                     </div>
                     <?php if (!isset($_SESSION['email'])) {
-                        // Visa logga in delen
-                        echo '<div class="loginbox2">
+                            // Visa logga in delen
+                            echo '<div class="loginbox2">
                             Logga in<br>
                             <form action="login" method="post">
                             Användarnamn:<br>
@@ -76,7 +76,7 @@ $posts = new Posts();
                             <input type="submit" name="loginbtn" class="login" value="Logga in">
                         </form>	
                         </div>';
-                    } ?>
+                        } ?>
                 </div>
 
             </div>

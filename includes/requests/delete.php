@@ -11,5 +11,3 @@ if (isset($_POST['postId'])) {
 } else {
     print "Fyll in alla rutorna.";
 }
-
-?>

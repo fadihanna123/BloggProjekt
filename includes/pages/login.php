@@ -8,5 +8,3 @@ $txt = $_POST['usrtxt'];
 $pass = $_POST['usrpass'];
 $posts = new Posts();
 $posts->check($txt, $pass);
-
-?>

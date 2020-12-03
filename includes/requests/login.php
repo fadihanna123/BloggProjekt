@@ -20,5 +20,3 @@ if (isset($_POST['usrtxt']) && isset($_POST['passtxt'])) {
 } else {
     print "Fyll in alla rutorna.";
 }
-
-?>

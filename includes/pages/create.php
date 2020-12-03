@@ -12,5 +12,3 @@ echo "<form action='add'>
 	        <input type='submit' class='add' value='Lägg till'>
 	        <input type='hidden' name='author' value='$show'>
 		</form>";
-
-?>

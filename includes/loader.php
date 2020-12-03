@@ -8,5 +8,3 @@ if ($_POST['page'] && is_file("pages/{$_POST['page']}.php")) {
 } else {
     print "Sidan existerar inte.";
 }
-
-?>

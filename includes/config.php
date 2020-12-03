@@ -13,5 +13,3 @@ define("DBHOST", "SERVER");
 define("DBDATABASE", "DB");
 define("DBUSER", "USERNAME");
 define("DBPASS", "PASSWORD");
-
-?>

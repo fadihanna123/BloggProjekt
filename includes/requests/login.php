@@ -4,9 +4,9 @@ require '../config.php';
 
 if (isset($_POST['usrtxt']) && isset($_POST['passtxt'])) {
     if (empty($_POST['usrtxt']) || strlen($_POST['usrtxt']) < 1) {
-        print "Anv�ndarnamn ska vara minst 1 tecken.";
+        print "Användarnamn ska vara minst 1 tecken.";
     } elseif (empty($_POST['passtxt']) || strlen($_POST['passtxt']) < 1) {
-        print "L�senordet ska vara minst 1 tecken.";
+        print "Lösenordet ska vara minst 1 tecken.";
     } else {
         if (isset($_SESSION['email'])) {
             echo "Du �r redan inloggad";

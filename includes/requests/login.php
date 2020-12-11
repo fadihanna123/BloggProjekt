@@ -9,7 +9,7 @@ if (isset($_POST['usrtxt']) && isset($_POST['passtxt'])) {
         print "Lösenordet ska vara minst 1 tecken.";
     } else {
         if (isset($_SESSION['email'])) {
-            echo "Du �r redan inloggad";
+            echo "Du är redan inloggad";
         } else {
             $txt = $_POST['usrtxt'];
             $pass = $_POST['passtxt'];

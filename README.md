@@ -88,7 +88,7 @@ Du behöver skapa dessa kolumner i dessa tabeller :<br>
 
 ## 1.4 Programmeringsspråk som används i projektet: <br>
 
-HTML, CSS, Objektorienterad PHP och Javascript. <br>
+HTML, CSS, Objektorienterad PHP, Typescript och Javascript. <br>
 
 ## 1.5 Skärmdump av webbplatsen <br>
 

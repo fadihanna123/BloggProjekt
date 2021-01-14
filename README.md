@@ -51,6 +51,7 @@ includes/requests/search.php <br />
 includes/requests/showposts.php <br />
 Includes/config.php <br />
 Includes/loader.php <br />
+js/loadAll.ts <br />
 blogg.sql <br />
 index.php <br />
 package.json <br />

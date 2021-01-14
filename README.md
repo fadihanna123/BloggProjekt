@@ -26,33 +26,39 @@ Webbapplikationen är responsivt.<br>
 
 ## 1.2 Mappstruktur <br>
 
-css/<br>
-css/main.css<br>
-css/mobile.css<br>
-css/normalize.css<br>
-Images/<br>
-Images/Logo.jpg<br>
-includes/<br>
-includes/classes/<br>
-includes/classes/posts.class.php<br>
-includes/pages/admin.php<br>
-includes/pages/create.php<br>
-includes/pages/edit.php<br>
-includes/pages/login.php<br>
-includes/pages/logout.php<br>
-includes/pages/register.php<br>
-includes/pages/showposts.php<br>
-includes/requests/add.php<br>
-includes/requests/delete.php<br>
-includes/requests/edit.php<br>
-includes/requests/login.php<br>
-includes/requests/register.php<br>
-includes/requests/search.php<br>
-includes/requests/showposts.php<br>
-Includes/config.php<br>
-Includes/loader.php<br>
-blogg.sql
-index.php
+css/ <br />
+css/main.css <br />
+css/mobile.css <br />
+css/normalize.css <br />
+Images/ <br />
+Images/Logo.jpg <br />
+includes/ <br />
+includes/classes/ <br />
+includes/classes/posts.class.php <br />
+includes/pages/admin.php <br />
+includes/pages/create.php <br />
+includes/pages/edit.php <br />
+includes/pages/login.php <br />
+includes/pages/logout.php <br />
+includes/pages/register.php <br />
+includes/pages/showposts.php <br />
+includes/requests/add.php <br />
+includes/requests/delete.php <br />
+includes/requests/edit.php <br />
+includes/requests/login.php <br />
+includes/requests/register.php <br />
+includes/requests/search.php <br />
+includes/requests/showposts.php <br />
+Includes/config.php <br />
+Includes/loader.php <br />
+blogg.sql <br />
+index.php <br />
+package.json <br />
+README.md <br />
+.php_cs.cache <br />
+Screenshot.PNG <br />
+tsconfig.json <br />
+yarn.lock <br />
 
 ## 1.3 Installation <br>
 
@@ -82,7 +88,7 @@ Du behöver skapa dessa kolumner i dessa tabeller :<br>
 
 ## 1.4 Programmeringsspråk som används i projektet: <br>
 
-HTML, CSS, Objektorienterad PHP och Javascript. <br>
+HTML, CSS, Objektorienterad PHP, Typescript och Javascript. <br>
 
 ## 1.5 Skärmdump av webbplatsen <br>
 

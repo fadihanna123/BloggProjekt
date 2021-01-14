@@ -1,0 +1,12 @@
+{
+  "name": "bloggprojekt",
+  "version": "1.0.0",
+  "author": "Fadi Hanna",
+  "scripts": {
+    "dev": "tsc -w"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jquery": "^3.5.5"
+  }
+}

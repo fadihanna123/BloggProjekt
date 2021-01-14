@@ -30,6 +30,8 @@ css/ <br />
 css/main.css <br />
 css/mobile.css <br />
 css/normalize.css <br />
+js/ <br />
+js/loadAll.ts <br />
 Images/ <br />
 Images/Logo.jpg <br />
 includes/ <br />
@@ -51,7 +53,6 @@ includes/requests/search.php <br />
 includes/requests/showposts.php <br />
 Includes/config.php <br />
 Includes/loader.php <br />
-js/loadAll.ts <br />
 blogg.sql <br />
 index.php <br />
 package.json <br />

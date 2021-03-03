@@ -1,6 +1,6 @@
 <?php
 
 require '../config.php';
-$posts = new Posts();
-$id = $_POST['hid'];
+$posts = (object) new Posts();
+$id = (int)$_POST['hid'];
 $posts->showPost($id);

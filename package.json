@@ -1,17 +1,10 @@
 {
   "name": "bloggprojekt",
   "version": "1.0.0",
-<<<<<<< HEAD
-  "author": "Fadi Hanna",
-  "scripts": {
-    "dev": "tsc -w"
-  },
-=======
   "scripts": {
     "dev": "tsc -w"
   },
   "author": "Fadi Hanna",
->>>>>>> 5923438f2429b4d563f433de812bc3eb5eaedde8
   "license": "MIT",
   "devDependencies": {
     "@types/jquery": "^3.5.5"

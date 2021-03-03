@@ -1,10 +1,10 @@
 <?php
 
 require '../config.php';
-$posts = new Posts();
+$posts = (object) new Posts();
 
 if (isset($_POST['postId'])) {
-    $id = $_POST['postId'];
+    $id = (int)$_POST['postId'];
 
     $posts->Delete($id);
     echo "<script>loader('admin');</script>";

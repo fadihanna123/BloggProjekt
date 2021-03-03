@@ -15,7 +15,7 @@ CREATE TABLE `posts` (
 INSERT INTO `posts` (`id`, `titel`, `post`, `author`, `date`, `usrid`) VALUES
 (2, 'hej', 'test', 'aaa', '2019-03-21 01:04:31', 1),
 (3, 'test', 'tessssssssssssssssssst', 'assa', '2019-03-21 23:15:40', 1),
-(4, 'df', 'fd', 'assa', '2019-03-22 00:43:09', 1),
+(4, 'df', 'fd', 'a', '2019-03-22 00:43:09', 1),
 (5, 'dsds', 'dsds', 'ds', '2019-03-22 21:47:08', 2);
 
 -- --------------------------------------------------------
@@ -38,7 +38,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `fullnamn`, `username`, `password`, `email`, `date`) VALUES
-(1, 'assa', 'assa', '123', 'addada@hotmail.com', '2019-03-21 01:01:41');
+(1, 'hej', 'hej', '123', 'addada@hotmail.com', '2019-03-21 01:01:41');
 
 --
 -- Index för dumpade tabeller

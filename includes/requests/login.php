@@ -11,9 +11,9 @@ if (isset($_POST['usrtxt']) && isset($_POST['passtxt'])) {
         if (isset($_SESSION['email'])) {
             echo "Du är redan inloggad";
         } else {
-            $txt = $_POST['usrtxt'];
-            $pass = $_POST['passtxt'];
-            $posts = new Posts();
+            $txt = (string)$_POST['usrtxt'];
+            $pass = (string)$_POST['passtxt'];
+            $posts = (object) new Posts();
             $posts->check($txt, $pass);
         }
     }

@@ -4,7 +4,7 @@ if (isset($_SESSION['email'])) {
     header("location: index.php");
 }
 require "../includes/config.php";
-$txt = $_POST['usrtxt'];
-$pass = $_POST['usrpass'];
-$posts = new Posts();
+$txt = (string)$_POST['usrtxt'];
+$pass = (string)$_POST['usrpass'];
+$posts = (object) new Posts();
 $posts->check($txt, $pass);

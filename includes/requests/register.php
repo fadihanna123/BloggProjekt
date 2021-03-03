@@ -9,10 +9,10 @@ if (
     isset($_POST['passwordtxt']) &&
     isset($_POST['emailtxt'])
 ) {
-    $fullname = $_POST['fullnametxt'];
-    $usrname = $_POST['usrnametxt'];
-    $password = $_POST['passwordtxt'];
-    $email = $_POST['emailtxt'];
+    $fullname = (string)$_POST['fullnametxt'];
+    $usrname = (string)$_POST['usrnametxt'];
+    $password = (string)$_POST['passwordtxt'];
+    $email = (string)$_POST['emailtxt'];
 
     $posts->doregister($fullname, $usrname, $password, $email);
 } else {

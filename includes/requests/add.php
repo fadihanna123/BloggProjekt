@@ -7,12 +7,12 @@ if (
     isset($_POST['title']) &&
     isset($_POST['content'])
 ) {
-    $author = $_POST['author'];
-    $title = $_POST['title'];
-    $content = $_POST['content'];
+    $author = (string)$_POST['author'];
+    $title = (string)$_POST['title'];
+    $content = (string)$_POST['content'];
 
-    $posts = new Posts();
-    $usrid = $posts->showId();
+    $posts = (object) new Posts();
+    $usrid = (int)$posts->showId();
     $posts->Add($author, $title, $content, $usrid);
 } else {
     print "Fyll in alla rutorna.";

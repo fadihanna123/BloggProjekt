@@ -1,24 +1,23 @@
 <?php
 
 class Posts
-{
-    protected $db;
+{protected $_db;
     // Fixar inställningar för anslutning till databas
     public function __construct()
     {
-        ($this->db = new mysqli(DBHOST, DBUSER, DBPASS, DBDATABASE)) or
-            die(
-                "Det finns okänt problem - Var vänlig kontakta administratören."
-            );
+        ($this->db = (object) new mysqli(DBHOST, DBUSER, DBPASS, DBDATABASE)) or
+        die(
+            "Det finns okänt problem - Var vänlig kontakta administratören."
+        );
     }
 
     // Visa de senaste 5 inlägg
-    public function showPosts()
+    public function showPosts(): void
     {
-        $sql = "SELECT * FROM posts ORDER BY date DESC LIMIT 5";
-        $result = $this->db->query($sql);
-        if ($num = mysqli_num_rows($result) > 0) {
-            while ($row = mysqli_fetch_array($result)) {
+        $sql = (string) "SELECT * FROM posts ORDER BY date DESC LIMIT 5";
+        $result = (object)$this->db->query($sql);
+        if ($num = (int)mysqli_num_rows($result) > 0) {
+            while ($row = (array)mysqli_fetch_array($result)) {
                 echo "
                     <ul>
                     <li>" .
@@ -39,13 +38,13 @@ class Posts
     }
 
     // Visa egna inlägg med både knapparna Ändra och Ta bort
-    public function Myposts()
+    public function Myposts(): void
     {
-        $id = $this->showId();
-        $sql = "SELECT * FROM posts WHERE usrid=$id";
-        $result = $this->db->query($sql);
+        $id = (int)$this->showId();
+        $sql = (string) "SELECT * FROM posts WHERE usrid=$id";
+        $result = (object)$this->db->query($sql);
         if (mysqli_num_rows($result) > 0) {
-            while ($row = mysqli_fetch_array($result)) {
+            while ($row = (array)mysqli_fetch_array($result)) {
                 echo "<div id='posts'>
                         <ul><li> " .
                     $row['titel'] .
@@ -55,7 +54,7 @@ class Posts
                     $row['author'] .
                     ", " .
                     $row['date'] .
-                    " 
+                    "
                         <form action='edit'>
                             <input type='hidden' name='postId' value='{$row['id']}' />
                             <input type='submit' class='change' value='Ändra'> &nbsp;
@@ -72,18 +71,18 @@ class Posts
     }
 
     // Hämta alla data från databas enligt id och där id är argument
-    public function getInfo($id)
+    public function getInfo(int $id): array
     {
-        $sql = "SELECT * FROM posts WHERE id=$id";
-        $result = $this->db->query($sql);
-        $row = mysqli_fetch_array($result);
+        $sql = (string) "SELECT * FROM posts WHERE id=$id";
+        $result = (object)$this->db->query($sql);
+        $row = (array)mysqli_fetch_array($result);
         return $row;
     }
 
     // Gör ta bort inlägg processen
-    public function Delete($id)
+    public function Delete(int $id): void
     {
-        $sql = "DELETE FROM posts WHERE id=$id";
+        $sql = (string) "DELETE FROM posts WHERE id=$id";
         if ($this->db->query($sql)) {
             echo "Klart!";
         } else {
@@ -92,9 +91,12 @@ class Posts
     }
 
     // Gör ändra inlägg processen
-    public function Edit($title, $post, $id)
-    {
-        $sql = "UPDATE posts SET titel='{$title}', post='{$post}' WHERE id='{$id}'";
+    public function Edit(
+        string $title,
+        string $post,
+        int $id
+    ): void {
+        $sql = (string) "UPDATE posts SET titel='{$title}', post='{$post}' WHERE id='{$id}'";
         if ($this->db->query($sql)) {
             print 'Klart.';
         } else {
@@ -103,33 +105,33 @@ class Posts
     }
 
     // Hämta fullständigt namn från databas enligt id som kommer från funktionen showid
-    public function info()
+    public function info(): string
     {
-        $id = $this->showId();
-        $sql = "SELECT * FROM users WHERE id=$id";
-        $result = $this->db->query($sql);
-        $row = mysqli_fetch_array($result);
+        $id = (int)$this->showId();
+        $sql = (string) "SELECT * FROM users WHERE id=$id";
+        $result = (object)$this->db->query($sql);
+        $row = (array)mysqli_fetch_array($result);
         return $row['fullnamn'];
     }
 
     // Hämta användare id från databas enligt id som kommer från session
-    public function showId()
+    public function showId(): int
     {
-        $email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
-        $sql = "SELECT id FROM users WHERE email='$email';";
-        $result = $this->db->query($sql);
-        $row = mysqli_fetch_array($result);
-        return $row['id'];
+        $email = (string) isset($_SESSION['email']) ? $_SESSION['email'] : '';
+        $sql = (string) "SELECT id FROM users WHERE email='$email';";
+        $result = (object)$this->db->query($sql);
+        $row = (array)mysqli_fetch_array($result);
+        return (int)$row['id'];
     }
 
     // Leta efter sökordet i databasen
-    public function search($ord)
+    public function search(string $ord): void
     {
-        $sql = "SELECT * FROM posts WHERE post LIKE '%$ord%' OR titel LIKE '%$ord%' OR author LIKE '%$ord%';";
-        $result = $this->db->query($sql);
-        $num = mysqli_num_rows($result);
+        $sql = (string) "SELECT * FROM posts WHERE post LIKE '%$ord%' OR titel LIKE '%$ord%' OR author LIKE '%$ord%';";
+        $result = (object)$this->db->query($sql);
+        $num = (int)mysqli_num_rows($result);
         if ($num > 0) {
-            while ($row = mysqli_fetch_array($result)) {
+            while ($row = (array)mysqli_fetch_array($result)) {
                 echo "<br><ul><li>" .
                     $row['titel'] .
                     "<br><u>" .
@@ -146,16 +148,16 @@ class Posts
     }
 
     // Visa användare inlägg enligt id som argument
-    public function showPost($id)
+    public function showPost($id): void
     {
-        $sql = "SELECT * FROM posts WHERE usrid=$id;";
-        $result = $this->db->query($sql);
+        $sql = (string) "SELECT * FROM posts WHERE usrid=$id;";
+        $result = (object)$this->db->query($sql);
         if (!isset($_SESSION['email'])) {
             echo "<script>alert('Du måste vara inloggad för att se denna sida');</script>";
             echo '<meta http-equiv="refresh" content="1; url=index.php">';
         }
-        if ($num = mysqli_num_rows($result) > 0) {
-            while ($row = mysqli_fetch_array($result)) {
+        if (mysqli_num_rows($result) > 0) {
+            while ($row = (array)mysqli_fetch_array($result)) {
                 echo "<div id='posts'>
                         <ul><li> " .
                     $row['titel'] .
@@ -165,7 +167,7 @@ class Posts
                     $row['author'] .
                     ", " .
                     $row['date'] .
-                    " 
+                    "
                         <br></li></div></ul>";
             }
         } else {
@@ -174,12 +176,12 @@ class Posts
     }
 
     // Visa alla de registrerade användare
-    public function showUsers()
+    public function showUsers(): void
     {
-        $sql = "SELECT * FROM users";
-        $result = $this->db->query($sql);
+        $sql = (string) "SELECT * FROM users";
+        $result = (object)$this->db->query($sql);
         if (mysqli_num_rows($result) > 0) {
-            while ($row = mysqli_fetch_array($result)) {
+            while ($row = (array)mysqli_fetch_array($result)) {
                 echo "
                         <ul class='list'>
                             <li><a class='ajax' id='doit' data-ajax='showposts' data-post='{$row['id']}'>$row[username]</a></li>
@@ -191,11 +193,15 @@ class Posts
     }
 
     // Gör registreringsprocessen genom att spara användaredata i databasen
-    public function doregister($fullname, $username, $password, $email)
-    {
-        $now = date('Y-m-d H:i:s', time());
+    public function doregister(
+        string $fullname,
+        string $username,
+        string $password,
+        string $email
+    ): void {
+        $now = (string)date('Y-m-d H:i:s', time());
 
-        $sql = "INSERT INTO users (fullnamn, username, password, email, date) VALUES('$fullname', '$username', '$password', '$email', '$now')";
+        $sql = (string) "INSERT INTO users (fullnamn, username, password, email, date) VALUES('$fullname', '$username', '$password', '$email', '$now')";
         if ($this->db->query($sql)) {
             echo 'Tack för registrering<meta http-equiv="refresh" content="2; url=index.php">';
         } else {
@@ -205,11 +211,15 @@ class Posts
     }
 
     // Gör lägga till processen genom att spara dessa data i databasen
-    public function Add($author, $title, $content, $usrid)
-    {
-        $now = date('Y-m-d H:i:s', time());
+    public function Add(
+        string $author,
+        string $title,
+        string $content,
+        int $usrid
+    ): void {
+        $now = (string)date('Y-m-d H:i:s', time());
 
-        $sql = "INSERT INTO posts (titel,post,author,date,usrid) VALUES ('$title', '$content', '$author', '$now','$usrid');";
+        $sql = (string) "INSERT INTO posts (titel,post,author,date,usrid) VALUES ('$title', '$content', '$author', '$now','$usrid');";
         if ($this->db->query($sql)) {
             echo 'Dina data har lagts till. <span href="admin" class="link ajax" data-ajax="admin">Gå tillbaka</span>';
         } else {
@@ -219,13 +229,15 @@ class Posts
     }
 
     // Kontrollera om användarnamet och lösenordet finns i databas eller inte
-    public function check($username, $password)
-    {
-        $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+    public function check(
+        string $username,
+        string $password
+    ): void {
+        $sql = (string) "SELECT * FROM users WHERE username='$username' AND password='$password'";
 
-        $result = $this->db->query($sql);
-        $num = mysqli_num_rows($result);
-        $row = mysqli_fetch_array($result);
+        $result = (object)$this->db->query($sql);
+        $num = (int)mysqli_num_rows($result);
+        $row = (array)mysqli_fetch_array($result);
         if ($num > 0) {
             echo '<div class="main">Du blev inloggad</div><meta http-equiv="refresh" content="1; url=index.php">';
             $_SESSION['email'] = $row['email'];

@@ -1,7 +1,7 @@
 <?php
 
-$posts = new Posts();
-$show = $posts->info();
+$posts = (object) new Posts();
+$show = (string)$posts->info();
 
 echo "<form action='add'>
 	        Skapare :<br>

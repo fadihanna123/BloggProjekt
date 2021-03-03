@@ -1,22 +1,22 @@
 <?php
 
 require '../config.php';
-$posts = new Posts();
+$posts = (object) new Posts();
 
 if (
     isset($_POST['postId']) &&
     isset($_POST['title']) &&
     isset($_POST['content'])
 ) {
-    $id = $_POST['postId'];
-    $title = $_POST['title'];
-    $content = $_POST['content'];
+    $id = (int)$_POST['postId'];
+    $title = (string)$_POST['title'];
+    $content = (string)$_POST['content'];
 
     $posts->Edit($title, $content, $id);
     echo "<script>loader('admin');</script>";
 } elseif (isset($_POST['postId'])) {
-    $id = $_POST['postId'];
-    $info = $posts->getInfo($id);
+    $id = (object)$_POST['postId'];
+    $info = (array)$posts->getInfo($id);
 
     echo "<form action='edit'>
             Titel: <br><input type='text' class='changetitle' name='title' value='{$info['titel']}' size='100' required><br>

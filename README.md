@@ -32,6 +32,7 @@ css/mobile.css <br />
 css/normalize.css <br />
 js/ <br />
 js/loadAll.ts <br />
+js/loadAll.js <br />
 Images/ <br />
 Images/Logo.jpg <br />
 includes/ <br />

@@ -58,7 +58,6 @@ blogg.sql <br />
 index.php <br />
 package.json <br />
 README.md <br />
-.php_cs.cache <br />
 Screenshot.PNG <br />
 tsconfig.json <br />
 yarn.lock <br />

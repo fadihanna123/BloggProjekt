@@ -29,7 +29,6 @@ Webbapplikationen är responsivt.<br>
 css/ <br />
 css/main.css <br />
 css/mobile.css <br />
-css/normalize.css <br />
 js/ <br />
 js/loadAll.ts <br />
 js/loadAll.js <br />

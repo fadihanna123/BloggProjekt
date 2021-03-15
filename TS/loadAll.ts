@@ -1,14 +1,14 @@
 // Om man trycker på valfri tagg som har class ajax då ladda in funktionen Loader
 $(function () {
   $(document)
-    .unbind("click")
+    .off("click")
     .on("click", ".ajax", () => {
       $(".ajaxRequest").empty();
-      loader($(this).attr("data-ajax")!);
+      loader($("ajax").attr("data-ajax"));
     });
   // Om man trycker på valfri knapp som har input submit och då skickas formulärdata till request mappens filer
   $(document)
-    .unbind("submit")
+    .off("submit")
     .on("submit", "form", (event: JQuery.SubmitEvent) => {
       event.preventDefault();
       $.ajax({
@@ -19,17 +19,16 @@ $(function () {
         $(".ajaxRequest")!.empty().append(data);
       });
     });
+  // Ladda in innehållet från pages mappens filer
+  const loader = (target: string) => {
+    const req: string = $("[data-ajax='" + target + "']").attr("data-post")!;
+
+    $.ajax({
+      url: "includes/loader.php",
+      type: "POST",
+      data: "page=" + target + "&request=" + req,
+    }).done((data) => {
+      $(".ajaxLoader")!.empty().append(data);
+    });
+  };
 });
-
-// Ladda in innehållet från pages mappens filer
-const loader = (target: string) => {
-  const req = $("[data-ajax='" + target + "']").attr("data-post")!;
-
-  $.ajax({
-    url: "includes/loader.php",
-    type: "POST",
-    data: "page=" + target + "&request=" + req,
-  }).done((data) => {
-    $(".ajaxLoader")!.empty().append(data);
-  });
-};

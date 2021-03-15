@@ -30,8 +30,9 @@ css/ <br />
 css/main.css <br />
 css/mobile.css <br />
 js/ <br />
-js/loadAll.ts <br />
 js/loadAll.js <br />
+TS/ <br />
+TS/loadAll.ts <br />
 Images/ <br />
 Images/Logo.jpg <br />
 includes/ <br />

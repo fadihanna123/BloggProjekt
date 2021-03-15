@@ -91,6 +91,6 @@ $posts->showUsers();
 
         </div>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <script src="js/loadAll.js?t=<?php echo time() ?>"></script>
+        <script src="js/loadAll.min.js?t=<?php echo time() ?>"></script>
     </body>
 </html>

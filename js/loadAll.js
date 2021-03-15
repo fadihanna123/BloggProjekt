@@ -2,14 +2,14 @@
 $(function () {
     var _this = this;
     $(document)
-        .unbind("click")
+        .off("click")
         .on("click", ".ajax", function () {
         $(".ajaxRequest").empty();
-        loader($(_this).attr("data-ajax"));
+        loader($("ajax").attr("data-ajax"));
     });
     // Om man trycker på valfri knapp som har input submit och då skickas formulärdata till request mappens filer
     $(document)
-        .unbind("submit")
+        .off("submit")
         .on("submit", "form", function (event) {
         event.preventDefault();
         $.ajax({
@@ -20,15 +20,15 @@ $(function () {
             $(".ajaxRequest").empty().append(data);
         });
     });
+    // Ladda in innehållet från pages mappens filer
+    var loader = function (target) {
+        var req = $("[data-ajax='" + target + "']").attr("data-post");
+        $.ajax({
+            url: "includes/loader.php",
+            type: "POST",
+            data: "page=" + target + "&request=" + req
+        }).done(function (data) {
+            $(".ajaxLoader").empty().append(data);
+        });
+    };
 });
-// Ladda in innehållet från pages mappens filer
-var loader = function (target) {
-    var req = $("[data-ajax='" + target + "']").attr("data-post");
-    $.ajax({
-        url: "includes/loader.php",
-        type: "POST",
-        data: "page=" + target + "&request=" + req
-    }).done(function (data) {
-        $(".ajaxLoader").empty().append(data);
-    });
-};

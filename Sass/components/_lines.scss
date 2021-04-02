@@ -1,0 +1,4 @@
+#{map-get($selectorMap, line)} {
+  width: $onehundredfiftypx; /* Gör linjen ha 150 pixlar bredd */
+  float: $leftpos; /* Flytta linjen vänster */
+}

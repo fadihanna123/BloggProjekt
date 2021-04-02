@@ -1,0 +1,20 @@
+#{map-get($selectorMap, leftMenu)} {
+  span {
+    border-bottom: $onepx $solidbrd#cccccc; /* Skapa en ram i botten och den har 1 pixlar med typen solid och har färg #cccccc */
+    padding: $fivepx; /* Gör litet rum 5 pixlar överallt i vänstra delen länkar */
+    cursor: $pointer; /* Gör länkarna i vänstra delen ha markrören pointer */
+    display: $block; /* Gör den som blockhållare och visa den */
+  }
+}
+
+#{map-get($selectorMap, leftMenu)} span:last-child {
+  span:last-child {
+    border: $zero; /* Gör sista länken ha 0 pixlar i ramen */
+  }
+}
+
+#{map-get($selectorMap, leftMenu)} {
+  span:hover {
+    background-color: #ff0000; /* När markrören går över länkarna i vänstra delen gör bakgrundsfärg #ff0000 */
+  }
+}

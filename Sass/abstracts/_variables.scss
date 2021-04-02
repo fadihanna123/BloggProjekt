@@ -1,0 +1,81 @@
+// Variables
+$ten: 10px;
+$onepx: 1px;
+$solidbrd: solid;
+$rel: relative;
+$fortypr: 40%;
+$seventypx: 70px;
+$thirteenpx: 13px;
+$twohundredpx: 200px;
+$leftpos: left;
+$onehundredfiftypx: 150px;
+$none: none;
+$blueclr: blue;
+$pointer: pointer;
+$inside: inside;
+$fifteenpx: 15px;
+$hid: hidden;
+$flex: flex;
+$webflex: -webkit-flexbox;
+$msflex: -ms-flexbox;
+$cntr: center;
+$sixteenpx: 16px;
+$dntrepeat: no-repeat;
+$threehundredtwentypx: 320px;
+$inblock: inline-block;
+$twentypx: 20px;
+$contain: contain;
+$font: Cambria, Georgia;
+$twohundredfiftypx: 250px;
+$eighthundredninetyeightpx: 898px;
+$redclr: red;
+$fivepx: 5px;
+$hundred: 100%;
+$twentyfivepr: 25%;
+$fiftypr: 50%;
+$auto: auto;
+$blackclr: black;
+$box: border-box;
+$zero: 0;
+$block: block;
+
+// Selectors
+$selectorMap: (
+  global: "*",
+  globalimg: "img",
+  body: "body",
+  globalLink: "a",
+  line: "hr",
+  link: ".link",
+  wrapper: "#container",
+  posts: "#posts",
+  searchBox2: ".searchbox2",
+  loginBox2: ".loginbox2",
+  registerBox: ".registerbox",
+  usrTxt: "#usrtxt",
+  word: "#word",
+  usrPass: "#usrpass",
+  fullnameTxt: ".fullnametxt",
+  emailTxt: ".emailtxt",
+  pswTxt: ".passwordtxt",
+  usrnameTxt: ".usrnametxt",
+  title: ".title",
+  content: ".content",
+  author: ".author",
+  changeTitle: ".changetitle",
+  changeContent: ".changecontent",
+  register: ".register",
+  doIt: "#doit",
+  list: ".list",
+  mainTable: ".maintable",
+  footer: ".footer",
+  logoBox: ".logobox",
+  logoBild: ".logobild",
+  leftMenu: ".menu-left",
+  leftMenuTable: ".maintable-left",
+  centerMenuTable: ".maintable-center",
+  rightMenuTable: ".maintable-right",
+  main: ".main",
+  err: ".error",
+  ajaxRequest: ".ajaxRequest",
+);

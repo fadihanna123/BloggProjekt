@@ -1,0 +1,24 @@
+#{map-get($selectorMap, global)} {
+  margin: $zero;
+  padding: $zero;
+  font-size: $hundred;
+  list-style: $none;
+  border: $zero;
+  outline: $zero;
+  box-sizing: $box;
+}
+
+#{map-get($selectorMap, globalimg)} {
+  width: $hundred;
+  max-width: $hundred;
+  height: $auto;
+}
+
+@media screen and (max-width: 1400px) {
+  #{map-get($selectorMap, body)} {
+    width: $hundred;
+    margin: $zero;
+    padding: $zero;
+    font-size: $hundred;
+  }
+}

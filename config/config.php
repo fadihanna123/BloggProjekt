@@ -6,7 +6,7 @@ error_reporting(-1);
 ini_set("display_errors", 1);
 
 spl_autoload_register(function ($class) {
-    include 'classes/' . $class . '.class.php';
+    include './lib/' . $class . '.class.php';
 });
 
 define("DBHOST", "SERVER");

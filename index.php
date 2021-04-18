@@ -1,6 +1,6 @@
 <?php
 
-require 'includes/config.php';
+require 'config/config.php';
 $posts = ( object ) new Posts();
 ?>
 <!-- Utvecklare: Fadi Hanna -->

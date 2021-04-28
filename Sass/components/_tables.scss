@@ -1,9 +1,9 @@
 #{map-get($selectorMap, mainTable)} {
-  margin: $zero $ten $zero $ten; /* Flytta ramet som täcker hela huvudinnehåll till 0 pixlar topp och 10 pixlar nere och 0 pixlar vänster och 10 pixlar höger */
-  border: $onepx $solidbrd $blackclr; /* Täcka en ram över huvudinnehållet */
-  border-radius: $fifteenpx; /* Gör ramen rund till 15 pixlar */
+  margin: 0 10px 0 10px; /* Flytta ramet som täcker hela huvudinnehåll till 0 pixlar topp och 10 pixlar nere och 0 pixlar vänster och 10 pixlar höger */
+  border: 1px $solidbrd color(black); /* Täcka en ram över huvudinnehållet */
+  border-radius: 15px; /* Gör ramen rund till 15 pixlar */
   overflow: $hid; /* Gör Överflödet klippt */
-  display: $webflex;
-  display: $msflex;
-  display: $flex; /* Visar ramet som en flexibel behållare */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; /* Visar ramet som en flexibel behållare */
 }

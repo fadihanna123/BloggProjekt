@@ -1,5 +1,5 @@
 #{map-get($selectorMap, footer)} {
   text-align: $cntr; /* Centrera texten i sidfoten */
-  font-size: $sixteenpx; /* Gör sidfoten ha textstorlek 16 pixlar */
-  margin: $ten; /* Flytta sidfoten till 10 pixlar från alla sidor */
+  font-size: 16px; /* Gör sidfoten ha textstorlek 16 pixlar */
+  margin: 10px; /* Flytta sidfoten till 10 pixlar från alla sidor */
 }

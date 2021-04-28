@@ -1,43 +1,12 @@
 // Variables
-$ten: 10px;
-$onepx: 1px;
 $solidbrd: solid;
-$rel: relative;
-$fortypr: 40%;
-$seventypx: 70px;
-$thirteenpx: 13px;
-$twohundredpx: 200px;
 $leftpos: left;
-$onehundredfiftypx: 150px;
 $none: none;
-$blueclr: blue;
 $pointer: pointer;
-$inside: inside;
-$fifteenpx: 15px;
 $hid: hidden;
-$flex: flex;
-$webflex: -webkit-flexbox;
-$msflex: -ms-flexbox;
 $cntr: center;
-$sixteenpx: 16px;
 $dntrepeat: no-repeat;
-$threehundredtwentypx: 320px;
-$inblock: inline-block;
-$twentypx: 20px;
-$contain: contain;
-$font: Cambria, Georgia;
-$twohundredfiftypx: 250px;
-$eighthundredninetyeightpx: 898px;
-$redclr: red;
-$fivepx: 5px;
-$hundred: 100%;
-$twentyfivepr: 25%;
-$fiftypr: 50%;
 $auto: auto;
-$blackclr: black;
-$box: border-box;
-$zero: 0;
-$block: block;
 
 // Selectors
 $selectorMap: (
@@ -79,3 +48,13 @@ $selectorMap: (
   err: ".error",
   ajaxRequest: ".ajaxRequest",
 );
+$colors: (
+  blue: #0000ff,
+  red: #ff0000,
+  black: #000,
+);
+
+// Functions
+@function color($val) {
+  @return map-get($colors, $val);
+}

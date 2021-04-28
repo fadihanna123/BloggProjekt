@@ -1,20 +1,20 @@
 #{map-get($selectorMap, logoBox)} {
   background: url("../Images/Logo.jpg") $dntrepeat $cntr $cntr; /* Lägg till bakgrundsbild(Logotypen) och att den itnte upprepas och det blir centrerat */
-  height: $threehundredtwentypx; /* Gör längden 320 pixlar för logotypen */
+  height: 320px; /* Gör längden 320 pixlar för logotypen */
 }
 
 #{map-get($selectorMap, logoBild)} {
-  display: $inblock; /* Visar logobilden som en blockbehållare. Logobilden är formaterat som ett inline-element, men du kan sätta längd- och breddvärden */
-  margin: $ten $auto; /* Flytta logotypen till 10 pixlar topp och automatisk nere */
-  border-radius: $twentypx; /* Gör logotyp rund till 20 pixlar */
+  display: inline-block; /* Visar logobilden som en blockbehållare. Logobilden är formaterat som ett inline-element, men du kan sätta längd- och breddvärden */
+  margin: 10px $auto; /* Flytta logotypen till 10 pixlar topp och automatisk nere */
+  border-radius: 20px; /* Gör logotyp rund till 20 pixlar */
 }
 
 /* Mobilt cssmodell */
 @media only screen and (max-width: 1400px) {
   #{map-get($selectorMap, logoBox)} {
     background-repeat: $dntrepeat; /* Gör Logodelen att inte upprepas */
-    background-size: $contain; /* Ändra storlek på bakgrundsbilden och se till att bilden är helt synlig oavsett situationer */
+    background-size: contain; /* Ändra storlek på bakgrundsbilden och se till att bilden är helt synlig oavsett situationer */
     background-position: $cntr; /* Centrera bakgrundsbilden */
-    margin: $zero $ten $zero $ten; /* Flytta logodelen 0pixlar top, 10 pixlar botten, 0 pixlar vänster och 10 pixlar höger */
+    margin: 0 10px 0 10px; /* Flytta logodelen 0pixlar top, 10 pixlar botten, 0 pixlar vänster och 10 pixlar höger */
   }
 }

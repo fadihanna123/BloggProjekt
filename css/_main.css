@@ -80,7 +80,7 @@ a {
 }
 
 .link {
-  color: blue;
+  color: #0000ff;
   /* Gör länken gå tillbaa länken blå */
 }
 
@@ -92,7 +92,7 @@ a {
 #doit {
   cursor: pointer;
   /* Gör länkarna delen för användaresdelen ha markrören pointer */
-  color: blue;
+  color: #0000ff;
   /* Gör länkarna delen för användaresdelen ha färg blå */
 }
 
@@ -103,13 +103,13 @@ a {
 .maintable {
   margin: 0 10px 0 10px;
   /* Flytta ramet som täcker hela huvudinnehåll till 0 pixlar topp och 10 pixlar nere och 0 pixlar vänster och 10 pixlar höger */
-  border: 1px solid black;
+  border: 1px solid #000;
   /* Täcka en ram över huvudinnehållet */
   border-radius: 15px;
   /* Gör ramen rund till 15 pixlar */
   overflow: hidden;
   /* Gör Överflödet klippt */
-  display: -webkit-flexbox;
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   /* Visar ramet som en flexibel behållare */
@@ -131,14 +131,6 @@ img {
   height: auto;
 }
 
-@media screen and (max-width: 1400px) {
-  body {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    font-size: 100%;
-  }
-}
 .footer {
   text-align: center;
   /* Centrera texten i sidfoten */
@@ -253,7 +245,7 @@ img {
 }
 
 .error {
-  color: red;
+  color: #ff0000;
   /* Låt felmeddelande ha rödfärg */
   text-align: center;
   /* Centrera felmeddelande */

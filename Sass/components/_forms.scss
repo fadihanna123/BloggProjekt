@@ -1,33 +1,33 @@
 #{map-get($selectorMap, searchBox2)} {
-  padding: $ten; /* Gör litet rum 10 pixlar överallt i sökdelen */
-  border-bottom: $onepx $solidbrd #000000; /* Täcka en bottenram 1 pixlar med typen solid och den ska ha färgen #000000 */
+  padding: 10px; /* Gör litet rum 10 pixlar överallt i sökdelen */
+  border-bottom: 1px $solidbrd #000000; /* Täcka en bottenram 1 pixlar med typen solid och den ska ha färgen #000000 */
 }
 
 #{map-get($selectorMap, loginBox2)} {
-  padding: $ten; /* Gör litet rum 10 pixlar överallt i logga in delen */
+  padding: 10px; /* Gör litet rum 10 pixlar överallt i logga in delen */
 }
 
 #{map-get($selectorMap, registerBox)} {
-  position: $rel;
-  left: $fortypr; /* Flytta registerdelen till 40% */
+  position: relative;
+  left: 40%; /* Flytta registerdelen till 40% */
 }
 
 /* Mobilt cssmodell */
 @media only screen and (max-width: 1400px) {
   #{map-get($selectorMap, usrTxt)} {
-    width: $seventypx; /* Gör användarnamnet textfält ha bredd 70 pixlar */
+    width: 70px; /* Gör användarnamnet textfält ha bredd 70 pixlar */
   }
 
   #{map-get($selectorMap, loginBox2)} {
-    font-size: $thirteenpx; /* Låt logga in delen ha textstorlek 13 pixlar */
+    font-size: 13px; /* Låt logga in delen ha textstorlek 13 pixlar */
   }
 
   #{map-get($selectorMap, word)} {
-    width: $seventypx; /* Gör den ha bredd 70 pixlar */
+    width: 70px; /* Gör den ha bredd 70 pixlar */
   }
 
   #{map-get($selectorMap, usrPass)} {
-    width: $seventypx; /* Gör den ha bredd 70 pixlar */
+    width: 70px; /* Gör den ha bredd 70 pixlar */
   }
 
   #{map-get($selectorMap, registerBox)} {
@@ -39,7 +39,7 @@
   #{map-get($selectorMap, emailTxt)},
   #{map-get($selectorMap, pswTxt)},
   #{map-get($selectorMap, usrnameTxt)} {
-    width: $seventypx; /* Gör dem ha bredd 70 pixlar */
+    width: 70px; /* Gör dem ha bredd 70 pixlar */
   }
 
   #{map-get($selectorMap, title)},
@@ -47,7 +47,7 @@
   #{map-get($selectorMap, author)},
   #{map-get($selectorMap, changeTitle)},
   #{map-get($selectorMap, changeContent)} {
-    width: $twohundredpx; /* Gör dem ha bredd 200 pixlar */
+    width: 200px; /* Gör dem ha bredd 200 pixlar */
   }
 
   #{map-get($selectorMap, register)} {

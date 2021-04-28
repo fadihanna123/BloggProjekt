@@ -1,32 +1,32 @@
 #{map-get($selectorMap, wrapper)} {
-  font-family: $font; /* Anpassa texttypsnittet för container till Cambria och Georgia */
+  font-family: Cambria, Georgia; /* Anpassa texttypsnittet för container till Cambria och Georgia */
   overflow: $hid; /* Gör Överflödet klippt */
   width: 1400px; /* Sätta bredden 1400 pixlar */
-  margin: $zero $auto; /* centrera container */
+  margin: 0 $auto; /* centrera container */
 }
 
 #{map-get($selectorMap, posts)} {
-  font-size: $twentypx; /* Visa inlägg i textstorlek 20 pixlar */
+  font-size: 20px; /* Visa inlägg i textstorlek 20 pixlar */
 }
 
 #{map-get($selectorMap, leftMenuTable)} {
   float: $leftpos; /* Flytta vänstra delen till vänster*/
-  width: $twohundredfiftypx; /* Gör bredden i vänstra delen till 250 pixlar */
+  width: 250px; /* Gör bredden i vänstra delen till 250 pixlar */
   background: #dadada; /* Lägg till i vänstra delen bakgrundsfärg #dadada */
 }
 
 #{map-get($selectorMap, centerMenuTable)} {
   float: $leftpos; /* Flytta center delen till vänster */
-  width: $eighthundredninetyeightpx; /* Gör centerdelen ha bredd 898 pixlar */
+  width: 898px; /* Gör centerdelen ha bredd 898 pixlar */
   background: #dadada; /* Lägg till i center delen bakgrundsfärg #dadada */
-  border-left: $onepx $solidbrd #000000; /* täcka vänster ram 1 pixlar med typen solid och ha färg #000000 */
-  border-right: $onepx $solidbrd #000000; /* täcka höger ram 1 pixlar med typen solid och ha färg #000000 */
-  padding: $ten; /* Gör litet rum 10 pixlar överallt i center delen länkar */
+  border-left: 1px $solidbrd #000000; /* täcka vänster ram 1 pixlar med typen solid och ha färg #000000 */
+  border-right: 1px $solidbrd #000000; /* täcka höger ram 1 pixlar med typen solid och ha färg #000000 */
+  padding: 10px; /* Gör litet rum 10 pixlar överallt i center delen länkar */
 }
 
 .maintable-right {
   float: $leftpos; /* Flytta höger delen till vänster */
-  width: $twohundredfiftypx; /* Låt höger delen ha bredd 250 pixlar */
+  width: 250px; /* Låt höger delen ha bredd 250 pixlar */
   background: #dadada; /* Lägg till i höger delen bakgrundsfärg #dadada */
 }
 
@@ -35,29 +35,29 @@
 }
 
 #{map-get($selectorMap, err)} {
-  color: $redclr; /* Låt felmeddelande ha rödfärg */
+  color: color(red); /* Låt felmeddelande ha rödfärg */
   text-align: $cntr; /* Centrera felmeddelande */
 }
 
 #{map-get($selectorMap, ajaxRequest)} {
-  padding: $zero $zero $fivepx $zero; /* Gör litet rum 0 pixlar toppen och 0 pixlar botten och 5 pixlar vänster och 0 pixlar */
-  margin: $zero $zero $fivepx $zero; /* Flytta 0 pixlar toppen och 0 pixlar botten och 5 pixlar vänster och 0 pixlar */
-  border-bottom: $onepx $solidbrd #000000; /* Täcka en bottenram 1 pixlar med typen solid och ha färg #000000 */
+  padding: 0 0 5px 0; /* Gör litet rum 0 pixlar toppen och 0 pixlar botten och 5 pixlar vänster och 0 pixlar */
+  margin: 0 0 5px 0; /* Flytta 0 pixlar toppen och 0 pixlar botten och 5 pixlar vänster och 0 pixlar */
+  border-bottom: 1px $solidbrd #000000; /* Täcka en bottenram 1 pixlar med typen solid och ha färg #000000 */
 }
 
 /* Mobilt cssmodell */
 @media only screen and (max-width: 1400px) {
   #{map-get($selectorMap, wrapper)} {
-    width: $hundred; /* Gör container ha bredd 100% */
-    margin: $zero; /* Ta bort 0 pixlar av alla sidor */
+    width: 100%; /* Gör container ha bredd 100% */
+    margin: 0; /* Ta bort 0 pixlar av alla sidor */
   }
 
   #{map-get($selectorMap, leftMenuTable)},
   #{map-get($selectorMap, rightMenuTable)} {
-    width: $twentyfivepr; /* Gör den ha bredd 25% */
+    width: 25%; /* Gör den ha bredd 25% */
   }
 
   #{map-get($selectorMap, centerMenuTable)} {
-    width: $fiftypr; /* Gör den ha bredd 50% */
+    width: 50%; /* Gör den ha bredd 50% */
   }
 }

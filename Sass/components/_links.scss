@@ -3,16 +3,16 @@
 }
 
 #{map-get($selectorMap, link)} {
-  color: $blueclr; /* Gör länken gå tillbaa länken blå */
+  color: color(blue); /* Gör länken gå tillbaa länken blå */
 }
 
 #{map-get($selectorMap, link)} {
   &:hover {
-    cursor: pointer; /* När man pekar på länken gå tillbaka då visas markören pointer  */
+    cursor: $pointer; /* När man pekar på länken gå tillbaka då visas markören pointer  */
   }
 }
 
 #{map-get($selectorMap, doIt)} {
   cursor: $pointer; /* Gör länkarna delen för användaresdelen ha markrören pointer */
-  color: $blueclr; /* Gör länkarna delen för användaresdelen ha färg blå */
+  color: color(blue); /* Gör länkarna delen för användaresdelen ha färg blå */
 }

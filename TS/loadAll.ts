@@ -4,7 +4,7 @@ $(function () {
     .off("click")
     .on("click", ".ajax", () => {
       $(".ajaxRequest").empty();
-      loader($("ajax").attr("data-ajax"));
+      loader($("ajax").attr("data-ajax")!);
     });
   // Om man trycker på valfri knapp som har input submit och då skickas formulärdata till request mappens filer
   $(document)

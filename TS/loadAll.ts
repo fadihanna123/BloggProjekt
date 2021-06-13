@@ -6,6 +6,7 @@ $(function () {
       $(".ajaxRequest").empty();
       loader($("ajax").attr("data-ajax")!);
     });
+
   // Om man trycker på valfri knapp som har input submit och då skickas formulärdata till request mappens filer
   $(document)
     .off("submit")
@@ -19,6 +20,7 @@ $(function () {
         $(".ajaxRequest")!.empty().append(data);
       });
     });
+
   // Ladda in innehållet från pages mappens filer
   const loader = (target: string) => {
     const req: string = $("[data-ajax='" + target + "']").attr("data-post")!;

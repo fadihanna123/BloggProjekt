@@ -66,8 +66,8 @@ yarn.lock <br />
 ## 1.3 Installation <br>
 
 Du kan ladda ner alla dessa filer och installera källkodsfiler i din lokala server eller egen hemsida. <br>
-Du behöver ändra SQL uppgifter från din localhost till din egen i dessa filer:<br>
-includes/config.php rad 12, 13, 14 och 15.<br>
+Du behöver ändra SQL uppgifter från din localhost till din egen i dessa filer:<br />
+includes/config.php rad 13, 14, 15 och 16. <br />
 Du kan använda blogg.sql filen för att kunna skapa tabeller.<br>
 Manuellt:<br>
 Du behöver skapa dessa tabeller:<br>

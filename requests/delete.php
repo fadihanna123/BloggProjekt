@@ -1,13 +1,15 @@
 <?php
 
-require '../config.php';
-$posts = (object) new Posts();
+    require '../config.php';
 
-if (isset($_POST['postId'])) {
-    $id = (int)$_POST['postId'];
+    $posts = (object) new Posts();
 
-    $posts->Delete($id);
-    echo "<script>loader('admin');</script>";
-} else {
-    print "Fyll in alla rutorna.";
-}
+    if (isset($_POST['postId'])) {
+        $id = (int)$_POST['postId'];
+
+        $posts->Delete($id);
+        
+        echo "<script>loader('admin');</script>";
+    } else {
+        print "Fyll in alla rutorna.";
+    }

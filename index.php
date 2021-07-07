@@ -1,7 +1,9 @@
 <?php
 
-require 'config/config.php';
-$posts = ( object ) new Posts();
+    require 'config/config.php';
+
+    $posts = ( object ) new Posts();
+
 ?>
 <!-- Utvecklare: Fadi Hanna -->
 <!DOCTYPE html>
@@ -33,15 +35,17 @@ $posts = ( object ) new Posts();
                     <span onclick="window.location = 'index.php'">Startsida</span>
                     <?php
 
-if ( isset( $_SESSION['email'] ) ) {
-    echo "<span class='ajax' data-ajax='create'>Skapa inlägg</span>";
-    echo "<span class='ajax' data-ajax='admin'>Administrera inlägg</span>";
-    echo "<span class='ajax' data-ajax='logout'>Logga ut</span>";
-} else {
-    echo "<span class='ajax' data-ajax='register'>Registrering</span>";
-}
+                        if ( isset( $_SESSION['email'] ) ) {
+                            echo "<span class='ajax' data-ajax='create'>Skapa inlägg</span>";
 
-?>
+                            echo "<span class='ajax' data-ajax='admin'>Administrera inlägg</span>";
+
+                            echo "<span class='ajax' data-ajax='logout'>Logga ut</span>";
+                        } else {
+                            echo "<span class='ajax' data-ajax='register'>Registrering</span>";
+                        }
+
+                   ?>
                 </div>
             </div>
             <!-- Lägg till centerdelen -->
@@ -53,14 +57,16 @@ if ( isset( $_SESSION['email'] ) ) {
 
                     <?php
 
-echo '<div>De senaste 5 inlägg</div>';
-// Visa de senaste 5 inlägg
-$posts->showPosts();
-// Visa de registrerade användare
-echo '<div>De registrerade användare</div>';
-$posts->showUsers();
+                        echo '<h2>De senaste 5 inlägg</h2>';
 
-?>
+                        // Visa de senaste 5 inlägg
+                        $posts->showPosts();
+                        
+                        // Visa de registrerade användare
+                        echo '<div>De registrerade användare</div>';
+                        $posts->showUsers();
+
+                   ?>
                 </div>
             </div>
             <!-- Lägg till högerdelen -->
@@ -73,20 +79,22 @@ $posts->showUsers();
                         <input type='submit' name='searchbtn' value='Sök' class='search' />
                     </form>
                 </div>
-                <?php if ( !isset( $_SESSION['email'] ) ) {
-    // Visa logga in delen
-    echo '<div class="loginbox2">
-                            Logga in<br>
-                            <form action="login" method="post">
-                            Användarnamn:<br>
-                            <input type="text" id="usrtxt" name="usrtxt" placeholder="Usernamne" required><br>
-                            Lösenord:<br>
-                            <input type="password" name="passtxt" id="usrpass" placeholder="Password" required><br><br>
-                            <input type="submit" name="loginbtn" class="login" value="Logga in">
-                        </form>
-                        </div>';
-}
-?>
+                <?php 
+                
+                    if ( !isset( $_SESSION['email'] ) ) {
+                                // Visa logga in delen
+                                echo '<div class="loginbox2">
+                                        Logga in<br>
+                                        <form action="login" method="post">
+                                        Användarnamn:<br>
+                                        <input type="text" id="usrtxt" name="usrtxt" placeholder="Usernamne" required><br>
+                                        Lösenord:<br>
+                                        <input type="password" name="passtxt" id="usrpass" placeholder="Password" required><br><br>
+                                        <input type="submit" name="loginbtn" class="login" value="Logga in">
+                                    </form>
+                                    </div>';
+                    }
+                ?>
             </div>
 
         </div>
@@ -94,7 +102,10 @@ $posts->showUsers();
         <div class='footer'>Skapad av Fadi</div>
 
     </div>
-    <script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+    <script
+       src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"></script>
     <script src='js/loadAll.js?t=<?php echo time() ?>'></script>
 </body>
 
